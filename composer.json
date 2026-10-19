@@ -1,0 +1,12 @@
+{
+    "name": "php-baremetal/bm-common",
+    "description": "Headers shared by php-baremetal packages: the neutral bm_err_t error codes of the bus extensions and their drivers.",
+    "type": "bm-lib",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gianfrancesco Aurecchia",
+            "email": "gianfri@aurecchia.com"
+        }
+    ]
+}
