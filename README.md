@@ -1,6 +1,6 @@
 # bm-common
 
-Headers shared by php-baremetal packages. Today it holds one: `bm_err.h`, the neutral error type of the bus
+Headers shared by php-baremetal packages. Today it holds two: `bm_err.h`, the neutral error type of the bus
 extensions ([ext-i2c](package:php-baremetal/ext-i2c), [ext-spi](package:php-baremetal/ext-spi)), their HALs and
 their device drivers. It is a `bm-lib` with no sources and no PHP API; you meet it only when you write one of
 those packages.
@@ -58,6 +58,8 @@ bm_err_t my_probe(void)
 
 A device driver does not need to require it: it requires the bus extension, which requires bm-common, and the
 driver header includes `bm_err.h`.
+
+`include/bm_board.h` is the read API for the board's peripheral blocks (`bm_board_id()`, `bm_board_type()`, `bm_board_int()`, `bm_board_str()`). The SDK implements it; host tests of packages use the stub in `tools/host-ext/stubs/board.c`.
 
 ## License
 
